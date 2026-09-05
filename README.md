@@ -8,16 +8,11 @@ Trip planning repo for **4 friends · 26 nights · Dec 9, 2026 → Jan 4, 2027**
 
 | File | Contents |
 |------|----------|
-| [itinerary.md](itinerary.md) | Full day-by-day plan, route overview, domestic flights, car rentals, and practical tips |
+| [itinerary-leaflet.html](itinerary-leaflet.html) | Full day-by-day plan, route overview, domestic flights, car rentals, and practical tips — the canonical itinerary, edited directly |
 | [packing.md](packing.md) | Packing list tailored for this trip's multi-climate route |
 | [bookings.md](bookings.md) | Advance booking tracker — status, platforms, and deadlines |
-| [itinerary-leaflet.html](itinerary-leaflet.html) | Served HTML view generated from `itinerary.md` |
 
-To regenerate the browser pages after changing the itinerary:
-
-```powershell
-python .\render_itinerary_html.py
-```
+`itinerary-leaflet.html` is hand-edited directly — there is no separate Markdown source or render step.
 
 ---
 
@@ -29,10 +24,9 @@ Buenos Aires
     → Buenos Aires (transit)
       → Península Valdés / Puerto Madryn
         → Ushuaia
-          → El Calafate
-            → El Chaltén
-              → El Calafate
-                → Bariloche 🎉 NYE
+          → El Chaltén
+            → El Calafate
+              → Bariloche 🎉 NYE
                   → Mendoza
                     → Buenos Aires (departure)
 ```

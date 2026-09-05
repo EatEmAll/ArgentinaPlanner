@@ -70,11 +70,12 @@ Deliver:
 3. **Advance booking checklist** — what to reserve and how far ahead
 4. **Practical logistics note** — arrival airport, inter-region transport method
 
-### Step 6: Render Repository Itinerary Changes
-When applying any change to `itinerary.md` in this repository, use
-`../itinerary-render/SKILL.md` after editing. Regenerate
-`itinerary-gmap.html` and `itinerary-leaflet.html` from the Markdown source
-before committing or pushing.
+### Step 6: Apply Repository Itinerary Changes
+When applying any change to this repository's itinerary, edit
+`itinerary-leaflet.html` directly — it is the only itinerary file, hand-authored,
+with no separate Markdown source or render step. See
+`../itinerary-images/references/image-conventions.md` for the HTML structure
+conventions (photo-grid tables, static map images) if the change touches images.
 
 ## Adapting for Other Destinations
 Replace Argentine regions with target-country equivalents. The gathering, routing, and day-structure procedures apply universally to any international trip.

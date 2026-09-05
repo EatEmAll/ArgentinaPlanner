@@ -1,5 +1,5 @@
 # Fetch static map images from the Google Maps Static API
-# Coordinates, zoom levels, and markers match itinerary-gmap.html exactly
+# Coordinates, zoom levels, and markers match itinerary-leaflet.html exactly
 
 Set-Location "c:\Users\Vladi\Dev\ArgentinaPlanner"
 

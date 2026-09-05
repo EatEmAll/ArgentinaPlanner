@@ -1,6 +1,6 @@
 ---
 name: itinerary-images
-description: 'Add, replace, download, and validate images in the Argentina trip itinerary. Use when adding a photo gallery to a destination section, replacing external image URLs with locally-stored files, downloading Wikimedia Commons or other images to the repo, or ensuring generated HTML shows the images from itinerary.md. Always download images to the appropriate destination folder under assets/images and run the itinerary-render workflow after changing itinerary.md. Triggers: add images, add photos, download images, replace image URLs, photo gallery, add photos to itinerary, image section, photo tiles, update images.'
+description: 'Add, replace, download, and validate images in the Argentina trip itinerary. Use when adding a photo gallery to a destination section, replacing external image URLs with locally-stored files, downloading Wikimedia Commons or other images to the repo, or checking that itinerary-leaflet.html shows the correct image references. Always download images to the appropriate destination folder under assets/images. Triggers: add images, add photos, download images, replace image URLs, photo gallery, add photos to itinerary, image section, photo tiles, update images.'
 ---
 
 # Itinerary Images
@@ -9,17 +9,12 @@ description: 'Add, replace, download, and validate images in the Argentina trip 
 - Adding a new photo gallery section to a destination that does not yet have one
 - Replacing external image URLs (Wikimedia Commons, OpenStreetMap) with locally downloaded files
 - Downloading all external images in a section or across the whole itinerary
-- Validating that existing image references in both files resolve correctly
-- Ensuring generated HTML pages show the image references from `itinerary.md`
+- Validating that existing image references resolve correctly
 
-## Critical Sync Rule
-**`itinerary.md` is the source of truth.** Never hand-edit generated HTML to
-change an image reference. Make the image change in `itinerary.md`, then use
-`../itinerary-render/SKILL.md` to regenerate `itinerary-gmap.html` and
-`itinerary-leaflet.html` in the same commit.
-
-Static map images referenced in `itinerary.md` are also included in the
-generated HTML pages.
+## Source Of Truth
+**`itinerary-leaflet.html` is the only itinerary file — edit it directly.**
+There is no separate Markdown source and no render step; a change to an image
+reference is complete once that one file is updated.
 
 ## Image Storage Convention
 Consult [image-conventions.md](./references/image-conventions.md) for:
@@ -40,8 +35,8 @@ Determine from context:
 
 ### Step 2: Discover Image URLs
 For **replacing existing** or **download all**:
-- Scan `itinerary.md` for `![...](http...)` or embedded `<img src="http...">`
-  references in the target destination section
+- Scan `itinerary-leaflet.html` for `<img src="http...">` references in the
+  target destination section
 - Build a list of `{ alt, url, filename }` objects
 
 For **adding new**:
@@ -77,29 +72,11 @@ For each validated image URL:
 
 Report any download failures before proceeding to Step 5.
 
-### Step 5: Update Markdown And Render HTML
-Update `itinerary.md`, then regenerate both HTML outputs. Include all three
-documents in the same commit.
-
-**In `itinerary.md`**:
+### Step 5: Update `itinerary-leaflet.html`
 - Replace each external URL with the local path: `./assets/images/<slug>/<filename>`
-- For a new section, insert the photo block immediately after the destination tagline and before the map line:
-  ```markdown
-  ![Alt text 1](./assets/images/<slug>/image1.jpg)
-  ![Alt text 2](./assets/images/<slug>/image2.jpg)
-  ![Alt text 3](./assets/images/<slug>/image3.jpg)
-  ![Alt text 4](./assets/images/<slug>/image4.jpg)
-  ![Alt text 5](./assets/images/<slug>/image5.jpg)
-  ```
-
-**Generate HTML outputs**:
-```powershell
-python .\render_itinerary_html.py
-```
+- For a new section, insert the photo block immediately after the destination tagline and before the map block. See [image-conventions.md](./references/image-conventions.md) for the exact table markup and the map block markup.
 
 ### Step 6: Final Verification
-After rendering:
-1. Confirm the affected image paths appear in both generated HTML files.
-2. Confirm every local path `./assets/images/<slug>/<filename>` exists on disk
-3. Load `itinerary-leaflet.html` locally and check that the images render.
-4. Report a summary: N images downloaded, N files updated, any skipped items.
+1. Confirm every local path `./assets/images/<slug>/<filename>` exists on disk
+2. Load `itinerary-leaflet.html` locally and check that the images render.
+3. Report a summary: N images downloaded, N files updated, any skipped items.

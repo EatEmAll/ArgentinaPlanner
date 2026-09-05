@@ -17,7 +17,7 @@ assets/
     ├── el-chalten/
     ├── bariloche/
     ├── mendoza/
-    └── maps/            ← static map images (MD only)
+    └── maps/            ← static map images
 ```
 
 ---
@@ -59,45 +59,31 @@ assets/
 
 ---
 
-## MD Format Templates
-
-### Photo block (after destination tagline, before map line)
-```markdown
-![Alt text 1](./assets/images/<slug>/image1.jpg)
-![Alt text 2](./assets/images/<slug>/image2.jpg)
-![Alt text 3](./assets/images/<slug>/image3.jpg)
-![Alt text 4](./assets/images/<slug>/image4.jpg)
-![Alt text 5](./assets/images/<slug>/image5.jpg)
-```
-
-### Static map image (MD only — HTML uses Leaflet, not an img tag)
-```markdown
-![Destination city map](./assets/images/maps/map_<slug>.png)
-```
-
----
-
 ## HTML Format Templates
 
-### photo-tiles block (after `<p class="dest-tagline">`, before `<div class="map-wrap">`)
-```html
-<div class="photo-tiles">
-  <div><img src="./assets/images/<slug>/image1.jpg" alt="Alt text 1" /></div>
-  <div><img src="./assets/images/<slug>/image2.jpg" alt="Alt text 2" /></div>
-  <div><img src="./assets/images/<slug>/image3.jpg" alt="Alt text 3" /></div>
-  <div><img src="./assets/images/<slug>/image4.jpg" alt="Alt text 4" /></div>
-  <div><img src="./assets/images/<slug>/image5.jpg" alt="Alt text 5" /></div>
-</div>
-```
+`itinerary-leaflet.html` is hand-authored HTML (not generated) — photo
+galleries are plain `<table>` grids of `<img>` tags, and maps are static PNG
+images, not an interactive map widget. Match this structure exactly; do not
+introduce `.photo-tiles` divs or a JS map library.
 
-> The first `<div>` inside `.photo-tiles` is always the hero/feature image (CSS gives it `grid-row: 1 / 3`). Put the most visually striking image first.
-
-### Map: HTML uses Leaflet, NOT a static image
-The HTML file renders destination maps via an interactive Leaflet map:
+### Photo grid (after the destination tagline, before the map block)
 ```html
-<div class="map-wrap map-dest" id="map-<section-id>"></div>
+<table width="100%" border="0" cellspacing="4" cellpadding="0"><tr>
+<td colspan="3"><img src="./assets/images/<slug>/image1.jpg" alt="Alt text 1" width="100%" /></td>
+<td colspan="3"><img src="./assets/images/<slug>/image2.jpg" alt="Alt text 2" width="100%" /></td>
+</tr><tr>
+<td colspan="2"><img src="./assets/images/<slug>/image3.jpg" alt="Alt text 3" width="100%" /></td>
+<td colspan="2"><img src="./assets/images/<slug>/image4.jpg" alt="Alt text 4" width="100%" /></td>
+<td colspan="2"><img src="./assets/images/<slug>/image5.jpg" alt="Alt text 5" width="100%" /></td>
+</tr></table>
 ```
-**Do not add or replace this with an `<img>` tag.** Only the MD file uses static map images.
+Rows commonly mix a 2-wide top row (`colspan="3"` each) with a 3-wide bottom row (`colspan="2"` each) for 5 images total; adjust colspans to fit however many images the section has, keeping each row's colspans summing to 6.
+
+### Static map image
+```html
+<img alt="Destination city map" src="./assets/images/maps/map_<slug>.png">
+<a href="<google-maps-or-other-map-link>">View on Google Maps ↗</a>
+```
 
 ---
 
@@ -105,8 +91,7 @@ The HTML file renders destination maps via an interactive Leaflet map:
 
 After every image update, verify:
 
-- [ ] Number of `![...]` lines in MD photo block == number of `<div><img>` lines in HTML photo-tiles block
 - [ ] Every `./assets/images/<slug>/<filename>` path exists on disk
-- [ ] MD alt text matches HTML `alt=""` attribute for each corresponding image
-- [ ] No external `http://` or `https://` URLs remain in photo block or static map line (MD)
-- [ ] No external `http://` or `https://` URLs remain in photo-tiles `<img src>` (HTML)
+- [ ] Each row's `colspan` values sum to 6 (the table is a 6-column grid)
+- [ ] No external `http://` or `https://` URLs remain in the photo grid or map `<img src>`
+- [ ] Load `itinerary-leaflet.html` locally and confirm the images render
