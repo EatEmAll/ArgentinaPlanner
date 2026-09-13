@@ -103,8 +103,8 @@ Book at the airport pickup desks or via [Rentalcars.com](https://www.rentalcars.
 | International flights | 2 | 2 | 0 |
 | Domestic flights | 6 | 6 | 0 |
 | Accommodation | 7 | 4 | 3 |
-| Car rentals | 2 *(Ushuaia dropped)* | 1 | 1 |
+| Car rentals | 2 *(+1 dropped)* | 1 | 1 |
 | Tours, activities & park tickets | 12 | 2 | 10 |
 | Buses / transfers | 2 | 1 | 1 |
 | Restaurants | 3 | 0 | 3 |
-| **Total** | **32** | **16** | **16** |
+| **Total** | **34** | **16** | **18** |
