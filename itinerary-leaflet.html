@@ -4,6 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Argentina Adventure - December 2026 / January 2027</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
   <style>
     *, *::before, *::after { box-sizing: border-box; }
     html { scroll-behavior: smooth; }
@@ -16,6 +18,28 @@
     }
     a { color: #1a5fa8; }
     a:hover { text-decoration: underline; }
+    .leaflet-map {
+      height: 340px;
+      border-radius: 10px;
+      margin: 1rem 0;
+      border: 1px solid #e4ddd4;
+      background: #efe8dd;
+      z-index: 0;
+    }
+    .leaflet-map .stop-badge {
+      background: #00205b;
+      color: #fff;
+      border-radius: 50%;
+      width: 26px;
+      height: 26px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 0.85rem;
+      border: 2px solid #fff;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.35);
+    }
     .hero {
       background: linear-gradient(135deg, #00205b 0%, #0055a4 60%, #74aadd 100%);
       color: #fff;
@@ -331,8 +355,8 @@
 </tr>
 </tbody>
 </table>
-<p><img alt="Argentina trip overview — all 6 destinations" src="./assets/images/maps/map_overview.png">
-<a href="https://www.google.com/maps/dir/Buenos+Aires,+Argentina/Puerto+Iguaz%C3%BA,+Misiones,+Argentina/Ushuaia,+Tierra+del+Fuego,+Argentina/El+Chalt%C3%A9n,+Santa+Cruz,+Argentina/El+Calafate,+Santa+Cruz,+Argentina/San+Carlos+de+Bariloche,+R%C3%ADo+Negro,+Argentina/Buenos+Aires,+Argentina">View Full Route on Google Maps ↗</a></p>
+<div id="map-overview" class="leaflet-map" data-map="overview" role="img" aria-label="Argentina trip overview — all 6 destinations"></div>
+<p><a href="https://www.google.com/maps/dir/Buenos+Aires,+Argentina/Puerto+Iguaz%C3%BA,+Misiones,+Argentina/Ushuaia,+Tierra+del+Fuego,+Argentina/El+Chalt%C3%A9n,+Santa+Cruz,+Argentina/El+Calafate,+Santa+Cruz,+Argentina/San+Carlos+de+Bariloche,+R%C3%ADo+Negro,+Argentina/Buenos+Aires,+Argentina">View Full Route on Google Maps ↗</a></p>
 <hr>
 <h2 id="day-by-day-summary">Day-by-Day Summary</h2>
 <table>
@@ -725,8 +749,8 @@
 <td><img src="./assets/images/buenos-aires/recoleta_cemetery_buenos_aires.jpg" alt="Recoleta Cemetery — ornate mausoleums, final home of Eva Perón" width="100%" /></td>
 </tr></table>
 
-<p><img alt="Buenos Aires city map" src="./assets/images/maps/map_buenos_aires.png">
-<a href="https://www.google.com/maps/place/Buenos+Aires,+Argentina/@-34.6037,-58.3816,13z">View on Google Maps ↗</a></p>
+<div id="map-buenos-aires-arrival" class="leaflet-map" data-map="buenos_aires" role="img" aria-label="Buenos Aires city map"></div>
+<p><a href="https://www.google.com/maps/place/Buenos+Aires,+Argentina/@-34.6037,-58.3816,13z">View on Google Maps ↗</a></p>
 <hr>
 <h4 id="day-1-wednesday-dec-9-arrival">Day 1 · Wednesday, Dec 9 — Arrival</h4>
 <ul>
@@ -796,8 +820,8 @@
 <td colspan="2"><img src="./assets/images/iguazu/ramphastos_toco_iguazu.jpg" alt="Toucan in the Iguazú jungle — exotic wildlife at every turn" width="100%" /></td>
 </tr></table>
 
-<p><img alt="Puerto Iguazú and Iguazú Falls region map" src="./assets/images/maps/map_iguazu.png">
-<a href="https://www.google.com/maps/place/Iguaz%C3%BA+National+Park/@-25.69,-54.44,11z">View on Google Maps ↗</a></p>
+<div id="map-iguazu" class="leaflet-map" data-map="iguazu" role="img" aria-label="Puerto Iguazú and Iguazú Falls region map"></div>
+<p><a href="https://www.google.com/maps/place/Iguaz%C3%BA+National+Park/@-25.69,-54.44,11z">View on Google Maps ↗</a></p>
 <hr>
 <h4 id="day-3-friday-dec-11-bonus-buenos-aires-morning-evening-flight-to-iguazu">Day 3 · Friday, Dec 11 — Bonus Buenos Aires Morning + Evening Flight to Iguazú</h4>
 <blockquote>
@@ -874,8 +898,8 @@
 <td><img src="./assets/images/ushuaia/tren_del_fin_del_mundo.jpg" alt="End of the World Train — steam through Tierra del Fuego jungle" width="100%" /></td>
 </tr></table>
 
-<p><img alt="Ushuaia and Tierra del Fuego map" src="./assets/images/maps/map_ushuaia.png">
-<a href="https://www.google.com/maps/place/Ushuaia,+Tierra+del+Fuego,+Argentina/@-54.8019,-68.3030,12z">View on Google Maps ↗</a></p>
+<div id="map-ushuaia" class="leaflet-map" data-map="ushuaia" role="img" aria-label="Ushuaia and Tierra del Fuego map"></div>
+<p><a href="https://www.google.com/maps/place/Ushuaia,+Tierra+del+Fuego,+Argentina/@-54.8019,-68.3030,12z">View on Google Maps ↗</a></p>
 <hr>
 <h4 id="day-5-sunday-dec-13-travel-to-ushuaia">Day 5 · Sunday, Dec 13 — Travel to Ushuaia</h4>
 <blockquote>
@@ -1004,8 +1028,8 @@
 <td colspan="2"><img src="./assets/images/el-chalten/el_chalten_sendero_salto_del_chorrillo_39264011012.jpg" alt="Chorrillo del Salto waterfall — a short walk from El Chaltén village" width="100%" /></td>
 </tr></table>
 
-<p><img alt="El Chaltén and Fitz Roy trekking area map" src="./assets/images/maps/map_el_chalten.png">
-<a href="https://www.google.com/maps/place/El+Chalt%C3%A9n,+Santa+Cruz,+Argentina/@-49.3310,-72.8855,11z">View on Google Maps ↗</a></p>
+<div id="map-el-chalten" class="leaflet-map" data-map="el_chalten" role="img" aria-label="El Chaltén and Fitz Roy trekking area map"></div>
+<p><a href="https://www.google.com/maps/place/El+Chalt%C3%A9n,+Santa+Cruz,+Argentina/@-49.3310,-72.8855,11z">View on Google Maps ↗</a></p>
 <hr>
 <h4 id="day-9-thursday-dec-17-travel-to-el-chalten">Day 9 · Thursday, Dec 17 — Travel to El Chaltén</h4>
 <ul>
@@ -1115,8 +1139,8 @@
 <td colspan="2"><img src="./assets/images/el-calafate/spegazzini_glacier.jpg" alt="Spegazzini Glacier — 135 m ice walls towering above the boat" width="100%" /></td>
 </tr></table>
 
-<p><img alt="El Calafate and Perito Moreno Glacier map" src="./assets/images/maps/map_el_calafate.png">
-<a href="https://www.google.com/maps/place/Perito+Moreno+Glacier/@-50.4934,-73.0479,11z">View on Google Maps ↗</a></p>
+<div id="map-el-calafate" class="leaflet-map" data-map="el_calafate" role="img" aria-label="El Calafate and Perito Moreno Glacier map"></div>
+<p><a href="https://www.google.com/maps/place/Perito+Moreno+Glacier/@-50.4934,-73.0479,11z">View on Google Maps ↗</a></p>
 <hr>
 <h4 id="day-12-sunday-dec-20-el-chalten-el-calafate-return">Day 12 · Sunday, Dec 20 — El Chaltén → El Calafate (Return)</h4>
 <ul>
@@ -1207,8 +1231,8 @@
 <td colspan="2"><img src="./assets/images/bariloche/ventisquero_negro_cerro_tronador.jpg" alt="Ventisquero Negro — the dramatic black glacier at Cerro Tronador" width="100%" /></td>
 </tr></table>
 
-<p><img alt="Bariloche and Nahuel Huapi Lake map" src="./assets/images/maps/map_bariloche.png">
-<a href="https://www.google.com/maps/place/San+Carlos+de+Bariloche,+R%C3%ADo+Negro,+Argentina/@-41.1335,-71.3103,11z">View on Google Maps ↗</a></p>
+<div id="map-bariloche" class="leaflet-map" data-map="bariloche" role="img" aria-label="Bariloche and Nahuel Huapi Lake map"></div>
+<p><a href="https://www.google.com/maps/place/San+Carlos+de+Bariloche,+R%C3%ADo+Negro,+Argentina/@-41.1335,-71.3103,11z">View on Google Maps ↗</a></p>
 <hr>
 <h4 id="day-15-wednesday-dec-23-flight-to-bariloche-arrival">Day 15 · Wednesday, Dec 23 — Flight to Bariloche + Arrival</h4>
 <ul>
@@ -1499,8 +1523,8 @@
 <hr>
 <h3 id="buenos-aires-departure">✈️ Buenos Aires (Departure)</h3>
 <p><strong>Jan 2–3 · 2 nights</strong></p>
-<p><img alt="Buenos Aires city map" src="./assets/images/maps/map_buenos_aires.png">
-<a href="https://www.google.com/maps/place/Buenos+Aires,+Argentina/@-34.6037,-58.3816,13z">View on Google Maps ↗</a></p>
+<div id="map-buenos-aires-departure" class="leaflet-map" data-map="buenos_aires" role="img" aria-label="Buenos Aires city map"></div>
+<p><a href="https://www.google.com/maps/place/Buenos+Aires,+Argentina/@-34.6037,-58.3816,13z">View on Google Maps ↗</a></p>
 <hr>
 <h4 id="day-25-saturday-jan-2-full-bariloche-day-late-flight-to-buenos-aires">Day 25 · Saturday, Jan 2 — Full Bariloche Day + Late Flight to Buenos Aires</h4>
 <blockquote>
@@ -1766,5 +1790,102 @@
     </main>
   </div>
   <footer class="footer">Argentina Adventure itinerary - generated from the canonical Markdown plan</footer>
+  <script>
+    var MAPS = {
+      overview: {
+        center: [-39, -64], zoom: 4, route: true,
+        stops: [
+          { n: 1, name: "Buenos Aires", coords: [-34.6037, -58.3816] },
+          { n: 2, name: "Puerto Iguazú", coords: [-25.5996, -54.5795] },
+          { n: 3, name: "Ushuaia", coords: [-54.8019, -68.3030] },
+          { n: 4, name: "El Chaltén", coords: [-49.3310, -72.8855] },
+          { n: 5, name: "El Calafate", coords: [-50.3388, -72.2688] },
+          { n: 6, name: "Bariloche", coords: [-41.1335, -71.3103] }
+        ]
+      },
+      buenos_aires: {
+        center: [-34.6037, -58.3816], zoom: 12,
+        stops: [
+          { label: "B", name: "Buenos Aires (city)", coords: [-34.6037, -58.3816] },
+          { label: "A", name: "Ezeiza International Airport (EZE)", coords: [-34.8222, -58.5358] }
+        ]
+      },
+      iguazu: {
+        center: [-25.68, -54.44], zoom: 11,
+        stops: [
+          { label: "T", name: "Puerto Iguazú (town)", coords: [-25.5996, -54.5795] },
+          { label: "P", name: "Parque Nacional Iguazú (Argentine side)", coords: [-25.6869, -54.4453] },
+          { label: "G", name: "Garganta del Diablo", coords: [-25.6953, -54.4367] }
+        ]
+      },
+      ushuaia: {
+        center: [-54.78, -68.38], zoom: 10,
+        stops: [
+          { label: "U", name: "Ushuaia (town)", coords: [-54.8019, -68.3030] },
+          { label: "P", name: "Tierra del Fuego National Park", coords: [-54.8475, -68.5514] },
+          { label: "L", name: "Lapataia Bay (end of Ruta 3)", coords: [-54.8612, -68.5978] }
+        ]
+      },
+      el_calafate: {
+        center: [-50.42, -72.66], zoom: 9,
+        stops: [
+          { label: "C", name: "El Calafate (town)", coords: [-50.3388, -72.2688] },
+          { label: "G", name: "Perito Moreno Glacier", coords: [-50.4934, -73.0479] }
+        ]
+      },
+      el_chalten: {
+        center: [-49.32, -72.91], zoom: 11,
+        stops: [
+          { label: "C", name: "El Chaltén (town)", coords: [-49.3310, -72.8855] },
+          { label: "F", name: "Fitz Roy / Laguna de los Tres", coords: [-49.2734, -72.9581] },
+          { label: "T", name: "Cerro Torre / Laguna Torre", coords: [-49.3098, -72.9875] }
+        ]
+      },
+      bariloche: {
+        center: [-41.19, -71.42], zoom: 10,
+        stops: [
+          { label: "B", name: "Bariloche (town)", coords: [-41.1335, -71.3103] },
+          { label: "C", name: "Circuito Chico / Cerro Campanario", coords: [-41.0887, -71.5068] },
+          { label: "L", name: "Llao Llao", coords: [-41.0622, -71.5336] },
+          { label: "T", name: "Cerro Tronador", coords: [-41.3447, -71.8867] }
+        ]
+      }
+    };
+
+    function initMaps() {
+      document.querySelectorAll(".leaflet-map[data-map]").forEach(function (el) {
+        var cfg = MAPS[el.getAttribute("data-map")];
+        if (!cfg || typeof L === "undefined") return;
+        var map = L.map(el, { scrollWheelZoom: false }).setView(cfg.center, cfg.zoom);
+        L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+          maxZoom: 19,
+          attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
+
+        cfg.stops.forEach(function (stop) {
+          var label = stop.n !== undefined ? stop.n : stop.label;
+          var icon = L.divIcon({
+            className: "",
+            html: '<div class="stop-badge">' + label + "</div>",
+            iconSize: [26, 26],
+            iconAnchor: [13, 13]
+          });
+          L.marker(stop.coords, { icon: icon }).addTo(map).bindPopup("<strong>" + stop.name + "</strong>");
+        });
+
+        if (cfg.route) {
+          L.polyline(cfg.stops.map(function (s) { return s.coords; }), {
+            color: "#00205b", weight: 3, dashArray: "6 6", opacity: 0.7
+          }).addTo(map);
+        }
+      });
+    }
+
+    if (document.readyState === "loading") {
+      document.addEventListener("DOMContentLoaded", initMaps);
+    } else {
+      initMaps();
+    }
+  </script>
 </body>
 </html>
