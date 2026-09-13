@@ -37,8 +37,8 @@ Book on [Aerolíneas Argentinas](https://www.aerolineas.com.ar), [Flybondi](http
 | 1 | Buenos Aires | Dec 9–10 | — | — | ⬜ | Palermo or Recoleta |
 | 2 | Puerto Iguazú | Dec 11–12 | — | — | ⬜ | In town, ~8 km from park |
 | 3 | Ushuaia | Dec 13–16 | — | — | ⬜ | Late arrival Dec 13 |
-| 4 | El Chaltén | Dec 17–19 | — | — | ⬜ | Hotel or cabin; 3 nights |
-| 5 | El Calafate (return) | Dec 20–22 | — | — | ⬜ | 3 nights, single stay — no split/return booking needed |
+| 4 | El Chaltén | Dec 17–19 | **Chaltén Apart 365** (Llao Llao N 65) | Booking.com #5878731853 | ✅ | 1 apartment, 4 adults; free cancellation until 9 Dec 23:59 El Chaltén time, then US$336 fee; check-in Dec 17 (flight lands ~12:00), check-out Dec 20 08:00–10:00 |
+| 5 | El Calafate (return) | Dec 20–22 | **Hosteria Los Canelos** | Booking.com #6399.346.449 | ✅ | 2× Superior Queen Room (4 adults); non-refundable; breakfast incl.; check-in 15:00, check-out 10:00 Dec 23 (well ahead of 09:25 flight) |
 | 6 | **Bariloche** | **Dec 23–Jan 1** | — | — | ✅ | Booked (10 nights, incl. NYE) |
 | 7 | Buenos Aires | Jan 2–3 | — | — | ⬜ | Palermo/Recoleta — arrive **EZE** 23:55 Jan 2 (~45–60 min transfer); 2 nights; pre-book late-night airport transfer |
 
@@ -61,7 +61,7 @@ Book at the airport pickup desks or via [Rentalcars.com](https://www.rentalcars.
 | # | Activity | Location | Date | Operator | Booking Ref | Status | Notes |
 |---|----------|----------|------|----------|-------------|--------|-------|
 | 1 | **Martillo Island penguin land-walk excursion** | Ushuaia | Dec 14 | — | — | ⬜ | ⚠️ Book well in advance; confirm land-walk and included transport before choosing Dec 14 vs Dec 15 rental pickup |
-| 2 | **Perito Moreno ice trek** (Mini-Trekking) | El Calafate | Dec 21 | [Hielo y Aventura](https://www.hieloyaventura.com) | — | ⬜ | ⚠️ **Book 2–3 months ahead** |
+| 2 | **Perito Moreno ice trek** (Minitrekking2) | El Calafate | Dec 21, 07:00 pickup | [Hielo y Aventura](https://www.hieloyaventura.com) | Reserva #770908 | ✅ | 4 pax; hotel transfer included, pickup point LOS CANELOS (matches Hosteria Los Canelos hotel) |
 | 3 | Iguazú boat safari (Macuco) | Puerto Iguazú | Dec 12 | — | — | ⬜ | Optional add-on to the Argentine-side day (Brazil side squeezed out by evening Dec 11 flight) |
 | 4 | Lago Argentino boat cruise (Upsala/Spegazzini) | El Calafate | Dec 22 | — | — | ⬜ | Full-day; book in advance |
 | 5 | **Cerro Tronador access confirmation** | Bariloche / Nahuel Huapi NP | Dec 25 | [Parque Nacional Nahuel Huapi](https://www.argentina.gob.ar/parquesnacionales/regionpatagonia/parque-nacional-nahuel-huapi/horarios-como-llegar) | — | ⬜ | Confirm Christmas-Day operation shortly before travel; current road windows: enter 10:30–14:00, exit 16:00–18:00 |
@@ -95,9 +95,9 @@ Book at the airport pickup desks or via [Rentalcars.com](https://www.rentalcars.
 |----------|------------|-----------|-----------|
 | International flights | 2 | 2 | 0 |
 | Domestic flights | 6 | 6 | 0 |
-| Accommodation | 7 | 1 | 6 |
+| Accommodation | 7 | 3 | 4 |
 | Car rentals | 3 | 1 | 2 |
-| Tours & activities | 6 | 0 | 6 |
+| Tours & activities | 6 | 1 | 5 |
 | Buses | 2 | 0 | 2 |
 | Restaurants | 2 | 0 | 2 |
-| **Total** | **28** | **10** | **18** |
+| **Total** | **28** | **13** | **15** |

@@ -41,8 +41,8 @@ Fetch-Map "$outDir\map_overview.png" "-39,-64" 4 @(
     "color:0x1d6fa4|label:1|-34.6037,-58.3816",
     "color:0x16a34a|label:2|-25.5996,-54.5795",
     "color:0xea580c|label:3|-54.8019,-68.3030",
-    "color:0xea580c|label:4|-50.3388,-72.2688",
-    "color:0xea580c|label:5|-49.3310,-72.8855",
+    "color:0xea580c|label:4|-49.3310,-72.8855",
+    "color:0xea580c|label:5|-50.3388,-72.2688",
     "color:0xdb2777|label:6|-41.1335,-71.3103"
 ) "640x500"
 
