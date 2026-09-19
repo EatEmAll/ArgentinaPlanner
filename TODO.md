@@ -16,7 +16,11 @@ Prioritized action list. Full details, references, and status for every line ite
 - [x] Perito Moreno ice trek (Minitrekking2, Dec 21 07:00, 4 pax, hotel transfer incl.)
 - [x] El Chaltén apartment (Dec 17–20, 3 nights — Chaltén Apart 365; free cancellation until Dec 9)
 - [x] Ushuaia hotel (Dec 13–16, **4 nights**, checkout Dec 17 — arrive 20:05 Dec 13)
+- [x] Buenos Aires hotel (Dec 9–11, 2 nights — Midtown Boutique Hotel)
+- [x] Puerto Iguazú hotel (Dec 11–13, 2 nights — Alojamiento mei-mei)
+- [x] Buenos Aires departure hotel (Jan 2–4, 2 nights — Midtown Boutique Hotel)
 - [x] Martillo Island penguin land-walk (Ushuaia, Dec 14 — Piratour)
+- [x] Glaciares Gourmet boat cruise (El Calafate, Dec 22 — Viator booking #1448811471)
 - [x] **FTE airport → El Chaltén transfer** (Dec 17, timed to the ~12:00 arrival)
 - [x] ~~Ushuaia car rental~~ — **not needed**, doing Ushuaia car-free
 
@@ -26,10 +30,6 @@ Prioritized action list. Full details, references, and status for every line ite
 
 - [ ] **NYE dinner reservation** — Bariloche, Dec 31. Book alongside big-ticket items; NYE menus sell out. **The most scarcity-constrained item left.**
 - [ ] **Dec 16 — Tierra del Fuego NP transport** ⚠️ *New, created by dropping the Ushuaia car.* That day assumed self-driving. NP + End of the World Train day tours run **~$50–58/pp with hotel pickup** and cover it neatly; shuttles also run from the centre.
-- [ ] **Core accommodation** (3 stays still unbooked — all high-inventory cities, low sellout risk):
-  - [ ] Buenos Aires, Dec 9–10
-  - [ ] Puerto Iguazú, Dec 11–12
-  - [ ] Buenos Aires departure, Jan 2–3 (Palermo/Recoleta — EZE arrival ~22:50 Jan 2 est.)
 
 ## 🎟️ Park tickets & fees — easy to miss, but gating
 
@@ -45,7 +45,7 @@ Prioritized action list. Full details, references, and status for every line ite
 
 ## 🟡 Book 2–4 weeks out
 
-- [ ] **Lago Argentino boat cruise** (Upsala/Spegazzini) — El Calafate, Dec 22
+- [x] **Glaciares Gourmet boat cruise** — El Calafate, Dec 22; booked via Viator (#1448811471), departing Puerto La Soledad
 - [ ] **El Chaltén → El Calafate bus** — Dec 20 (only needed if skipping the optional El Calafate car)
 - [ ] **Cerro Tronador access confirmation** — check shortly before Dec 25 that Christmas Day access is open
 - [ ] **Final dinner reservation** — Buenos Aires, Jan 3
